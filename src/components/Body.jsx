@@ -1,6 +1,6 @@
 import logo from "../assets/img/logo_atelier_clara_finale.svg";
 
-const Header = () => {
+const Body = () => {
   return (
     <>
       <header>
@@ -17,4 +17,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Body;
