@@ -2,9 +2,9 @@ import imageWelcome from "../assets/img/test_fond_resize.png";
 
 const Home = () => {
   return (
-    <section className="welcome">
+    <section className="home">
       <img
-        className="welcome-background"
+        className="home-background"
         src={imageWelcome}
         alt="Représentation de carnets"
       />
