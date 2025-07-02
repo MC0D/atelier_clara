@@ -1,3 +1,7 @@
-const Body = () => {};
+import Home from "./Home";
+
+const Body = () => {
+  return <Home />;
+};
 
 export default Body;
