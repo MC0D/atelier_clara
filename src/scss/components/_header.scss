@@ -1,42 +1,99 @@
 @use "../base/variables" as *;
 
 header {
-  border: 1px solid red;
-  height: 5rem;
   display: flex;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: $box-shadow;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $background-color;
 
-  .logo {
+  .container-button-shop {
+    flex: 2 1 40%;
     display: flex;
     align-items: center;
-    padding-left: 1.5rem;
-    img {
-      width: 100%;
-      height: 100%;
+    padding-left: 3rem;
+
+    .shop-button {
+      border: $main-color solid 1px;
+      background-color: $background-color;
+      font-size: 2.5rem;
+      box-shadow: $box-shadow;
+      width: 16.875rem;
+      height: 5rem;
+      cursor: pointer;
+      transition: 1s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+      }
     }
   }
 
-  .burger {
+  .container-button-home {
+    flex: 1 0 20%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2rem;
-    height: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1001;
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 
-    span {
-      display: block;
-      height: 3px;
-      width: 100%;
-      background: white;
-      border-radius: 5px;
+    .logo-business {
+      height: 10rem;
+      width: auto;
+    }
+  }
+
+  nav.navbar {
+    flex: 2 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a:not(.basket-link) {
+      display: flex;
+      text-decoration: none;
+      font-size: 1.25rem;
+      position: relative;
+      transition: 0.5s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $main-color;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      &:hover {
+        color: $main-color;
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+    .basket-link {
+      display: flex;
+      align-items: center;
+
+      .logo-basket {
+        transition: transform 1s ease;
+
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
     }
   }
 }
