@@ -5,6 +5,16 @@
   display: flex;
   flex-direction: column;
 
+  h2 {
+    font-weight: unset;
+    color: $main-color;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    text-shadow: $box-shadow;
+  }
+
   .container-about {
     width: 100%;
     display: flex;
@@ -16,27 +26,13 @@
       display: flex;
       flex-direction: column;
       gap: 5%;
+      width: 50%;
+      p {
+        font-size: 2rem;
+        color: $main-color;
+        letter-spacing: 0.2rem;
+        height: 100%;
+      }
     }
   }
-}
-
-h2 {
-  font-weight: unset;
-  color: $main-color;
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  padding-top: 5%;
-  text-shadow: $box-shadow;
-}
-
-p {
-  font-size: 2rem;
-  color: $main-color;
-  letter-spacing: 0.2rem;
-  height: 100%;
-}
-
-.about-me {
-  width: 50%;
 }

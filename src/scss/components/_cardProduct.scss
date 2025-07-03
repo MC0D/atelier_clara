@@ -1,0 +1,32 @@
+@use "../base/variables" as *;
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  .card-photo {
+    max-width: 15rem;
+  }
+  h4 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .card-price {
+    font-weight: 600;
+  }
+  .card-button {
+    border: $main-color solid 1px;
+    background-color: $background-color;
+    font-size: 1.5rem;
+    box-shadow: $box-shadow;
+    width: 8rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 1s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
