@@ -2,7 +2,7 @@ import cardPhoto from "../assets/img/product_card.svg";
 
 const CardProduct = ({ name, prix, description }) => {
   return (
-    <div className="productCard">
+    <div className="product-card">
       <img className="card-photo" src={cardPhoto} alt="Carnets" />
       <h4>{name}</h4>
       <p className="card-description">{description}</p>
