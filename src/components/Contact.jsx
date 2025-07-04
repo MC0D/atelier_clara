@@ -8,7 +8,7 @@ const Contact = () => {
           indiquer votre numéro de commande.
         </p>
       </div>
-      <form id="contact-form" method="POST">
+      <form id="contact-form" method="">
         <div class="form-group">
           <input type="text" placeholder="Prénom" name="firstname" required />
           <input type="text" placeholder="Nom" name="lastname" required />

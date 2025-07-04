@@ -43,9 +43,11 @@
         box-shadow: $box-shadow-text;
         padding: 0.5rem;
         flex: 1;
+        font-family: "Times New Roman", Times, serif;
 
         &::placeholder {
           color: $main-color;
+          font-family: $main-font;
         }
 
         &:hover {
