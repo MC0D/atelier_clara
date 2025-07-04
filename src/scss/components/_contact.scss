@@ -1,0 +1,72 @@
+@use "../base/variables" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  .container-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h5 {
+      text-align: center;
+      font-weight: unset;
+      text-shadow: $box-shadow;
+    }
+  }
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    border: 1 px solid red;
+    max-width: 850px;
+
+    .form-group {
+      max-width: 100%;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      input,
+      textarea {
+        padding: 4px;
+        outline: 0;
+        border: none;
+        font-size: 2rem;
+        transition: 300ms border linear;
+        font-weight: unset;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: $box-shadow-text;
+        padding: 0.5rem;
+        flex: 1;
+
+        &::placeholder {
+          color: $main-color;
+        }
+
+        &:hover {
+          box-shadow: $box-shadow;
+        }
+      }
+    }
+    button {
+      padding: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: $box-shadow;
+      font-size: 2rem;
+      flex: 1;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 1s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
