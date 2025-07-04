@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import logoBusiness from "../assets/img/logo_atelier_clara_finale.svg";
 import logoBasket from "../assets/img/logo_panier_navbar.svg";
 
-const Header = () => {
+const Header = ({ onLogoClick, onContactClick, onShopClick }) => {
   const headerRef = useRef(null);
   const lastScrollRef = useRef(0);
 
@@ -21,14 +21,18 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <header ref={headerRef}>
       <div className="container-button-shop">
-        <button className="shop-button">Boutique</button>
+        <button onClick={onShopClick} className="shop-button">
+          Boutique
+        </button>
       </div>
       <div className="container-button-home">
-        <a href="/">
+        <a>
           <img
+            onClick={onLogoClick}
             className="logo-business"
             src={logoBusiness}
             alt="Logo de l'entreprise"
@@ -36,10 +40,10 @@ const Header = () => {
         </a>
       </div>
       <nav className="navbar">
-        <a href="#">Contact</a>
-        <a href="#">Compte</a>
-        <a href="#">FAQ</a>
-        <a href="#" className="basket-link">
+        <a onClick={onContactClick}>Contact</a>
+        <a>Compte</a>
+        <a>FAQ</a>
+        <a className="basket-link">
           <img className="logo-basket" src={logoBasket} alt="Logo du panier" />
         </a>
       </nav>
