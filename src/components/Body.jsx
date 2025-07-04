@@ -1,4 +1,5 @@
 import About from "./About";
+import FlowerDecoration from "./FlowerDecoration";
 import Home from "./Home";
 import Shop from "./Shop";
 
@@ -8,6 +9,7 @@ const Body = () => {
       <Home />
       <About />
       <Shop />
+      <FlowerDecoration />
     </>
   );
 };
